@@ -192,10 +192,11 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 group"
+                  disabled={isLoading}
+                  className="w-full px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  Send Message
+                  {isLoading ? "Sending..." : "Send Message"}
                 </button>
 
                 {submitted && (
