@@ -40,7 +40,7 @@ export async function handleEmailSubmission(
     }
 
     // Send email via Brevo API
-    const recipientEmail = "yadavdeepakk9212@gmail..com";
+    const recipientEmail = "yadavdeepakk9213@gmail.com";
 
     const emailPayload = {
       sender: {
