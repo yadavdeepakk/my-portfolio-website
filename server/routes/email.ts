@@ -1,9 +1,33 @@
 import { Request, Response } from "express";
+import nodemailer from "nodemailer";
 
 interface ContactFormData {
   name: string;
   email: string;
   message: string;
+}
+
+let transporter: nodemailer.Transporter | null = null;
+
+function initializeTransporter() {
+  if (transporter) return transporter;
+
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailPassword = process.env.GMAIL_PASSWORD;
+
+  if (!gmailUser || !gmailPassword) {
+    throw new Error("Gmail credentials not configured");
+  }
+
+  transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: gmailUser,
+      pass: gmailPassword,
+    },
+  });
+
+  return transporter;
 }
 
 export async function handleEmailSubmission(
@@ -30,45 +54,44 @@ export async function handleEmailSubmission(
       });
     }
 
-    const brevoApiKey = process.env.BREVO_API_KEY;
-    if (!brevoApiKey) {
-      console.error("BREVO_API_KEY is not set");
-      return res.status(500).json({
-        success: false,
-        error: "Email service is not configured",
-      });
-    }
+    const transport = initializeTransporter();
+    const gmailUser = process.env.GMAIL_USER;
 
-    // Send email via Brevo API
-    const recipientEmail = "yadavdeepakk9213@gmail.com";
-
-    const emailPayload = {
-      sender: {
-        name: name,
-        email: email,
-      },
-      to: [
-        {
-          email: recipientEmail,
-          name: "Deepak Kumar Yadav",
-        },
-      ],
+    // Send email via Gmail SMTP
+    const mailOptions = {
+      from: gmailUser,
+      to: gmailUser,
       subject: `New Portfolio Message from ${name}`,
-      htmlContent: `
+      html: `
         <html>
-          <head></head>
+          <head>
+            <style>
+              body { font-family: Arial, sans-serif; }
+              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+              .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+              .content { line-height: 1.6; }
+              .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px; }
+            </style>
+          </head>
           <body>
-            <h2>New Message from Portfolio</h2>
-            <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-            <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-            <p><strong>Message:</strong></p>
-            <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
-            <hr>
-            <p><small>This email was sent via your portfolio contact form</small></p>
+            <div class="container">
+              <div class="header">
+                <h2>New Message from Portfolio</h2>
+              </div>
+              <div class="content">
+                <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+                <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+                <p><strong>Message:</strong></p>
+                <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
+              </div>
+              <div class="footer">
+                <p>This email was sent via your portfolio contact form</p>
+              </div>
+            </div>
           </body>
         </html>
       `,
-      textContent: `
+      text: `
         New Message from Portfolio
 
         Name: ${name}
@@ -80,28 +103,11 @@ export async function handleEmailSubmission(
         ---
         This email was sent via your portfolio contact form
       `,
+      replyTo: email,
     };
 
-    const response = await fetch("https://api.brevo.com/v3/smtp/email", {
-      method: "POST",
-      headers: {
-        "api-key": brevoApiKey,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(emailPayload),
-    });
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error("Brevo API Error:", errorData);
-      return res.status(500).json({
-        success: false,
-        error: "Failed to send email",
-      });
-    }
-
-    const data = await response.json();
-    console.log("Email sent successfully:", data);
+    await transport.sendMail(mailOptions);
+    console.log(`Email sent successfully from ${email}`);
 
     return res.status(200).json({
       success: true,
@@ -112,7 +118,9 @@ export async function handleEmailSubmission(
     return res.status(500).json({
       success: false,
       error:
-        error instanceof Error ? error.message : "An unknown error occurred",
+        error instanceof Error
+          ? error.message
+          : "Failed to send email. Please try again later.",
     });
   }
 }
