@@ -24,6 +24,7 @@ A modern, responsive, and beautifully designed personal portfolio website showca
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React** 18.3.1 - UI library
 - **TypeScript** 5.9.2 - Type-safe JavaScript
 - **Vite** 7.1.2 - Next generation build tool
@@ -33,10 +34,12 @@ A modern, responsive, and beautifully designed personal portfolio website showca
 - **React Router** 6.30.1 - Client-side routing
 
 ### Backend
+
 - **Express** 5.1.0 - Node.js web framework
 - **Node.js** - JavaScript runtime
 
 ### Development Tools
+
 - **TypeScript** - Static type checking
 - **Vitest** 3.2.4 - Unit testing framework
 - **Prettier** 3.6.2 - Code formatter
@@ -53,6 +56,7 @@ Before you begin, ensure you have the following installed on your system:
 - **Git** ([Download](https://git-scm.com/))
 
 You can verify your installations by running:
+
 ```bash
 node --version
 pnpm --version
@@ -71,16 +75,19 @@ cd portfolio
 ### 2. Install Dependencies
 
 Using **pnpm** (recommended):
+
 ```bash
 pnpm install
 ```
 
 Or using **npm**:
+
 ```bash
 npm install
 ```
 
 Or using **yarn**:
+
 ```bash
 yarn install
 ```
@@ -96,6 +103,7 @@ The application will be available at `http://localhost:8080`
 ### 4. Open in Browser
 
 Open your web browser and navigate to:
+
 ```
 http://localhost:8080
 ```
@@ -146,12 +154,14 @@ portfolio/
 ## 🔨 Available Scripts
 
 ### Development
+
 ```bash
 # Start dev server with hot reload
 pnpm dev
 ```
 
 ### Building
+
 ```bash
 # Build both client and server
 pnpm build
@@ -164,18 +174,21 @@ pnpm build:server
 ```
 
 ### Production
+
 ```bash
 # Start production server
 pnpm start
 ```
 
 ### Testing
+
 ```bash
 # Run unit tests
 pnpm test
 ```
 
 ### Code Quality
+
 ```bash
 # Format code with Prettier
 pnpm format.fix
@@ -189,6 +202,7 @@ pnpm typecheck
 The application doesn't require environment variables to run locally. However, if you want to customize it:
 
 Create a `.env` file in the root directory:
+
 ```env
 # Example environment variables
 VITE_API_URL=http://localhost:8080
@@ -199,12 +213,14 @@ VITE_API_URL=http://localhost:8080
 ## 📱 Responsive Design
 
 The portfolio is fully responsive and optimized for:
+
 - 📱 Mobile devices (320px and up)
 - 📱 Tablets (768px and up)
 - 💻 Desktops (1024px and up)
 - 🖥️ Large screens (1400px and up)
 
 Test responsiveness by:
+
 1. Opening the app in your browser
 2. Pressing `F12` to open Developer Tools
 3. Click the device toggle to view different screen sizes
@@ -253,6 +269,7 @@ Edit `tailwind.config.ts` to customize the theme colors. The design uses CSS cus
 ### Deploy to Other Platforms
 
 The application builds to `dist/spa` for the frontend. You can deploy this to any static hosting service:
+
 - GitHub Pages
 - GitLab Pages
 - Cloudflare Pages
@@ -264,6 +281,7 @@ The application builds to `dist/spa` for the frontend. You can deploy this to an
 ### Port Already in Use
 
 If port 8080 is already in use:
+
 ```bash
 # Kill the process using port 8080 (Unix/Linux/Mac)
 lsof -ti:8080 | xargs kill -9
@@ -334,6 +352,7 @@ If you encounter any issues or have questions:
 ## 🎯 Future Enhancements
 
 Planned features for future versions:
+
 - [ ] Blog section
 - [ ] GitHub integration to display latest projects
 - [ ] Analytics dashboard
