@@ -35,7 +35,15 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      let data;
+      const contentType = response.headers.get("content-type");
+
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        data = text ? JSON.parse(text) : { success: false };
+      }
 
       if (response.ok && data.success) {
         setSubmitted(true);
