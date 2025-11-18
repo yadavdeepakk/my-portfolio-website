@@ -12,12 +12,12 @@ const Footer = () => {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "#",
+      href: "https://www.linkedin.com/in/deepak-yadav-922503245/",
     },
     {
       name: "Email",
       icon: Mail,
-      href: "mailto:deepakyadav@example.com",
+      href: "mailto:yadavdeepakk9212@gmail..com",
     },
   ];
 
