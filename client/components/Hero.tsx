@@ -37,10 +37,12 @@ const Hero = () => {
                 View Projects <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               <a
-                href="#contact"
+                href="https://drive.google.com/file/d/1jAzF6wzrO-2Dt8DMmdms7UCkL9BWIwm_/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors flex items-center justify-center gap-2"
               >
-                Download Resume
+                Show Resume
               </a>
             </div>
           </div>

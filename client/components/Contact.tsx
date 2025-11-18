@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,8 +32,8 @@ const Contact = () => {
     {
       name: "Email",
       icon: Mail,
-      href: "mailto:deepakyadav@example.com",
-      label: "deepakyadav@example.com",
+      href: "mailto:yadavdeepakk9212@gmail..com",
+      label: "yadavdeepakk9212@gmail..com",
     },
     {
       name: "GitHub",
@@ -44,14 +44,8 @@ const Contact = () => {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "#",
+      href: "https://www.linkedin.com/in/deepak-yadav-922503245/",
       label: "LinkedIn Profile",
-    },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      href: "#",
-      label: "Twitter/X",
     },
   ];
 
