@@ -11,7 +11,7 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -58,7 +58,8 @@ const Contact = () => {
             <h2 className="text-primary">Contact</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Let's build something cool together! Reach out and let's start a conversation.
+              Let's build something cool together! Reach out and let's start a
+              conversation.
             </p>
           </div>
 

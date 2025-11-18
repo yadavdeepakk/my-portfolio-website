@@ -100,9 +100,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>
-            © {currentYear} Deepak Kumar Yadav. All rights reserved.
-          </p>
+          <p>© {currentYear} Deepak Kumar Yadav. All rights reserved.</p>
           <div className="flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-primary" /> and React
           </div>
