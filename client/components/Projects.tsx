@@ -23,15 +23,6 @@ const Projects = () => {
       category: "dsa",
     },
     {
-      id: "2",
-      name: "todo-list-mern",
-      description: "To-do list application built using the MERN stack",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      github: "https://github.com/yadavdeepakk/todo-list-mern",
-      demo: "https://todo-list-mern-demo.vercel.app",
-      category: "mern",
-    },
-    {
       id: "3",
       name: "Attendance-analyzer-n8n",
       description:
@@ -61,15 +52,6 @@ const Projects = () => {
       category: "mern",
     },
     {
-      id: "6",
-      name: "Weather-Forecast",
-      description: "Weather forecast web app consuming weather API",
-      tags: ["JavaScript", "API", "React"],
-      github: "https://github.com/yadavdeepakk/Weather-Forecast",
-      demo: "https://weather-forecast-demo.vercel.app",
-      category: "web",
-    },
-    {
       id: "7",
       name: "Lottery-Game",
       description: "Simple lottery-style game built with JavaScript",
@@ -85,15 +67,6 @@ const Projects = () => {
       tags: ["JavaScript", "Utility"],
       github: "https://github.com/yadavdeepakk/Random-Password-generator",
       demo: "https://random-password-generator-omega-sage.vercel.app/",
-      category: "utilities",
-    },
-    {
-      id: "9",
-      name: "Calculator",
-      description: "Basic calculator UI built as a mini-project",
-      tags: ["JavaScript", "UI"],
-      github: "https://github.com/yadavdeepakk/Calculator",
-      demo: "https://calculator-demo.vercel.app",
       category: "utilities",
     },
     {
