@@ -42,6 +42,8 @@ export async function handleEmailSubmission(
   try {
     const { name, email, message } = req.body;
 
+    console.log(`Received contact form submission from: ${email}`);
+
     // Validate input
     if (!name || !email || !message) {
       return res.status(400).json({
@@ -61,6 +63,8 @@ export async function handleEmailSubmission(
 
     const transport = initializeTransporter();
     const gmailUser = process.env.GMAIL_USER;
+
+    console.log(`Attempting to send email to: ${gmailUser}`);
 
     // Send email via Gmail SMTP
     const mailOptions = {
@@ -112,7 +116,7 @@ export async function handleEmailSubmission(
     };
 
     await transport.sendMail(mailOptions);
-    console.log(`Email sent successfully from ${email}`);
+    console.log(`Email sent successfully to ${gmailUser} from ${email}`);
 
     return res.status(200).json({
       success: true,
