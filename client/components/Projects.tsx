@@ -102,7 +102,7 @@ const Projects = () => {
       description: "Frontend hackathon project (forked and customized)",
       tags: ["JavaScript", "Frontend"],
       github: "https://github.com/yadavdeepakk/NsitHackthon",
-      demo: "https://nsit-hackathon-demo.vercel.app",
+      demo: "https://hackathonnsit.netlify.app/",
       category: "web",
     },
     {
