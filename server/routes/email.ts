@@ -16,6 +16,9 @@ function initializeTransporter() {
   let gmailPassword = process.env.GMAIL_PASSWORD;
 
   if (!gmailUser || !gmailPassword) {
+    console.error("Gmail credentials not configured");
+    console.error(`GMAIL_USER: ${gmailUser ? "set" : "not set"}`);
+    console.error(`GMAIL_PASSWORD: ${gmailPassword ? "set" : "not set"}`);
     throw new Error("Gmail credentials not configured");
   }
 
@@ -26,6 +29,9 @@ function initializeTransporter() {
 
   transporter = nodemailer.createTransport({
     service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
     auth: {
       user: gmailUser,
       pass: gmailPassword,
