@@ -196,18 +196,6 @@ const Projects = () => {
             </p>
           </div>
 
-          {/* Featured Projects */}
-          {activeFilter === "all" && (
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-foreground">Featured Projects</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {featuredProjects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Filter Buttons */}
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((cat) => (
