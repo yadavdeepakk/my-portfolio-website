@@ -106,6 +106,7 @@ const Projects = () => {
       description: "Frontend hackathon project (forked and customized)",
       tags: ["JavaScript", "Frontend"],
       github: "https://github.com/yadavdeepakk/NsitHackthon",
+      demo: "https://nsit-hackathon-demo.vercel.app",
       category: "web",
     },
     {
@@ -114,6 +115,7 @@ const Projects = () => {
       description: "Hackathon / event-related frontend project",
       tags: ["JavaScript", "Frontend"],
       github: "https://github.com/yadavdeepakk/Ignitia",
+      demo: "https://ignitia-demo.vercel.app",
       category: "web",
     },
   ];
