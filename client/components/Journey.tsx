@@ -11,66 +11,45 @@ const Journey = () => {
   const timeline: TimelineItem[] = [
     {
       id: 1,
-      year: "2021",
-      title: "Started BCA",
+      year: "2022",
+      title: "Class 12 with Maths & Commerce",
       description:
-        "Began my Bachelor of Computer Applications degree, marking the start of my formal computer science education.",
+        "Completed senior secondary education with Commerce stream and Mathematics, laying the foundation for a tech career.",
     },
     {
       id: 2,
-      year: "2021",
-      title: "Started Learning Programming",
+      year: "2023",
+      title: "Started BCA & Programming Basics",
       description:
-        "Learned the fundamentals with C and C++, building a strong foundation in programming concepts and algorithms.",
+        "Began my Bachelor of Computer Applications degree. Learned programming fundamentals with Java and JavaScript, building a strong foundation in coding concepts and algorithms.",
     },
     {
       id: 3,
-      year: "2022",
+      year: "2024",
       title: "Web Development Journey",
       description:
-        "Mastered HTML5, CSS3, and JavaScript. Built my first web projects and fell in love with frontend development.",
+        "Mastered HTML5, CSS3, and JavaScript. Built my first web projects including Calculator, Lottery Game, Password Generator, and Weather Forecast app. Started learning React and the MERN stack.",
     },
     {
       id: 4,
-      year: "2022",
-      title: "JavaScript Projects",
+      year: "2024",
+      title: "Full-Stack Development",
       description:
-        "Built small projects like Calculator, Lottery Game, Password Generator, and Weather Forecast web app.",
+        "Dived deep into the MERN stack (MongoDB, Express, React, Node.js). Built full-stack applications and explored automation with n8n for data management and workflow automation.",
     },
     {
       id: 5,
-      year: "2023",
-      title: "MERN Stack Development",
+      year: "2024",
+      title: "Hackathons & System Design",
       description:
-        "Dived into the MERN stack (MongoDB, Express, React, Node.js) and built full-stack applications.",
+        "Participated in multiple hackathons (AI-Hackathon-MS, NsitHackthon, Ignitia). Started practicing Data Structures and Algorithms in Java and learning system design principles.",
     },
     {
       id: 6,
-      year: "2023",
-      title: "Automation & Low-Code Tools",
-      description:
-        "Worked on automation projects using n8n and Google Sheets for attendance tracking and data management.",
-    },
-    {
-      id: 7,
-      year: "2023",
-      title: "Hackathons & AI Exploration",
-      description:
-        "Participated in multiple hackathons (AI-Hackathon-MS, NsitHackthon, Ignitia) and explored AI APIs.",
-    },
-    {
-      id: 8,
-      year: "2024",
-      title: "DSA & System Design",
-      description:
-        "Currently practicing Data Structures and Algorithms in Java, learning system design, and preparing for interviews.",
-    },
-    {
-      id: 9,
       year: "2025",
-      title: "AI Tools & Automation Projects",
+      title: "AI Tools & Modern Development",
       description:
-        "Built multiple projects leveraging AI tools and automation platforms. Explored n8n, Cursor, Claude, and other AI-powered development tools to enhance productivity and create intelligent applications.",
+        "Exploring AI-powered development tools like Cursor, Claude, and n8n. Building intelligent projects that leverage automation and AI, enhancing productivity and creating innovative applications.",
     },
   ];
 
