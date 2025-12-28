@@ -45,8 +45,8 @@ const Projects = () => {
       description:
         "Full-stack web app built in JavaScript (medical/health workflow)",
       tags: ["JavaScript", "Full-stack", "Healthcare"],
-      github: "https://github.com/yadavdeepakk/Medic-sync-plus",
-      demo: "https://medic-sync-plus.vercel.app",
+      github: "https://github.com/yadavdeepakk/medic-sync-plus-d58b8a51.git",
+      demo: "https://medic-sync-plus.lovable.app",
       category: "mern",
     },
     {
