@@ -19,7 +19,6 @@ const Projects = () => {
       description: "DSA concepts and practice implementations in Java",
       tags: ["Java", "DSA", "Algorithms"],
       github: "https://github.com/yadavdeepakk/DSA-Java",
-      demo: "https://dsa-java-demo.vercel.app",
       category: "dsa",
     },
     {
@@ -38,7 +37,6 @@ const Projects = () => {
       description: "Hackathon project using AI-related logic and APIs",
       tags: ["JavaScript", "AI", "API"],
       github: "https://github.com/yadavdeepakk/AI-Hackathon-MS",
-      demo: "https://ai-hackathon-ms.vercel.app",
       category: "web",
     },
     {
