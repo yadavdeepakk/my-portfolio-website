@@ -123,9 +123,12 @@ const Journey = () => {
 
           {/* Future goal */}
           <div className="mt-12 p-8 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30 text-center">
-            <h3 className="text-2xl font-bold text-primary mb-2">Current Goal</h3>
+            <h3 className="text-2xl font-bold text-primary mb-2">
+              Current Goal
+            </h3>
             <p className="text-foreground text-lg">
-              Become a Software Engineer and make meaningful contributions to open-source projects
+              Become a Software Engineer and make meaningful contributions to
+              open-source projects
             </p>
           </div>
         </div>

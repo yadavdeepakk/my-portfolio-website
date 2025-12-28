@@ -34,7 +34,8 @@ const Projects = () => {
     {
       id: "3",
       name: "Attendance-analyzer-n8n",
-      description: "Automated attendance tracking system using n8n and Google Sheets",
+      description:
+        "Automated attendance tracking system using n8n and Google Sheets",
       tags: ["JavaScript", "n8n", "Google Sheets", "Automation"],
       github: "https://github.com/yadavdeepakk/Attendance-analyzer-n8n",
       demo: "https://attendance-analyzer-n8n-demo.vercel.app",
@@ -52,7 +53,8 @@ const Projects = () => {
     {
       id: "5",
       name: "Medic-sync-plus",
-      description: "Full-stack web app built in JavaScript (medical/health workflow)",
+      description:
+        "Full-stack web app built in JavaScript (medical/health workflow)",
       tags: ["JavaScript", "Full-stack", "Healthcare"],
       github: "https://github.com/yadavdeepakk/Medic-sync-plus",
       demo: "https://medic-sync-plus.vercel.app",
@@ -137,7 +139,9 @@ const Projects = () => {
           <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
             {project.name}
           </h3>
-          <p className="text-sm text-muted-foreground mt-1">{project.description}</p>
+          <p className="text-sm text-muted-foreground mt-1">
+            {project.description}
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -186,7 +190,8 @@ const Projects = () => {
             <h2 className="text-primary">Projects</h2>
             <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of projects I've built, showcasing my skills across web development, MERN stack, and more.
+              A collection of projects I've built, showcasing my skills across
+              web development, MERN stack, and more.
             </p>
           </div>
 
