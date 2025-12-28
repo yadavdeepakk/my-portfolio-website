@@ -9,7 +9,6 @@ interface Project {
   github: string;
   demo?: string;
   category: "web" | "mern" | "utilities" | "games" | "dsa";
-  featured?: boolean;
 }
 
 const Projects = () => {
@@ -22,7 +21,6 @@ const Projects = () => {
       github: "https://github.com/yadavdeepakk/DSA-Java",
       demo: "https://dsa-java-demo.vercel.app",
       category: "dsa",
-      featured: true,
     },
     {
       id: "2",
@@ -32,7 +30,6 @@ const Projects = () => {
       github: "https://github.com/yadavdeepakk/todo-list-mern",
       demo: "https://todo-list-mern-demo.vercel.app",
       category: "mern",
-      featured: true,
     },
     {
       id: "3",
@@ -42,7 +39,6 @@ const Projects = () => {
       github: "https://github.com/yadavdeepakk/Attendance-analyzer-n8n",
       demo: "https://attendance-analyzer-n8n-demo.vercel.app",
       category: "utilities",
-      featured: true,
     },
     {
       id: "4",
@@ -52,7 +48,6 @@ const Projects = () => {
       github: "https://github.com/yadavdeepakk/AI-Hackathon-MS",
       demo: "https://ai-hackathon-ms.vercel.app",
       category: "web",
-      featured: true,
     },
     {
       id: "5",
@@ -62,7 +57,6 @@ const Projects = () => {
       github: "https://github.com/yadavdeepakk/Medic-sync-plus",
       demo: "https://medic-sync-plus.vercel.app",
       category: "mern",
-      featured: true,
     },
     {
       id: "6",
