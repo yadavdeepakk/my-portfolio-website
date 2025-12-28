@@ -75,7 +75,7 @@ const Projects = () => {
       description: "Simple lottery-style game built with JavaScript",
       tags: ["JavaScript", "Game"],
       github: "https://github.com/yadavdeepakk/Lottery-Game",
-      demo: "https://lottery-game-demo.vercel.app",
+      demo: "https://lottery-game-puce.vercel.app/",
       category: "games",
     },
     {
@@ -111,7 +111,7 @@ const Projects = () => {
       description: "Hackathon / event-related frontend project",
       tags: ["JavaScript", "Frontend"],
       github: "https://github.com/yadavdeepakk/Ignitia",
-      demo: "https://ignitia-demo.vercel.app",
+      demo: "https://ignitia-drab.vercel.app/",
       category: "web",
     },
   ];
