@@ -54,7 +54,8 @@ export async function handleEmailSubmission(
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    const trimmedEmail = email.trim();
+    if (!emailRegex.test(trimmedEmail)) {
       return res.status(400).json({
         success: false,
         error: "Invalid email format",
