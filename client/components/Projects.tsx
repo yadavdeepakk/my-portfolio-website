@@ -84,7 +84,7 @@ const Projects = () => {
       description: "Random password generator web app",
       tags: ["JavaScript", "Utility"],
       github: "https://github.com/yadavdeepakk/Random-Password-generator",
-      demo: "https://random-password-generator.vercel.app",
+      demo: "https://random-password-generator-omega-sage.vercel.app/",
       category: "utilities",
     },
     {
