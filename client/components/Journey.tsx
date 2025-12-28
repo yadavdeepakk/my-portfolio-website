@@ -65,6 +65,13 @@ const Journey = () => {
       description:
         "Currently practicing Data Structures and Algorithms in Java, learning system design, and preparing for interviews.",
     },
+    {
+      id: 9,
+      year: "2025",
+      title: "AI Tools & Automation Projects",
+      description:
+        "Built multiple projects leveraging AI tools and automation platforms. Explored n8n, Cursor, Claude, and other AI-powered development tools to enhance productivity and create intelligent applications.",
+    },
   ];
 
   return (
