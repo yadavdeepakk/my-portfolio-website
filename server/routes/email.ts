@@ -13,11 +13,16 @@ function initializeTransporter() {
   if (transporter) return transporter;
 
   const gmailUser = process.env.GMAIL_USER;
-  const gmailPassword = process.env.GMAIL_PASSWORD;
+  let gmailPassword = process.env.GMAIL_PASSWORD;
 
   if (!gmailUser || !gmailPassword) {
     throw new Error("Gmail credentials not configured");
   }
+
+  // Remove spaces from Gmail App Password (they're just for readability)
+  gmailPassword = gmailPassword.replace(/\s/g, "");
+
+  console.log(`Initializing Gmail transporter for: ${gmailUser}`);
 
   transporter = nodemailer.createTransport({
     service: "gmail",
