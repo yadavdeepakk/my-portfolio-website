@@ -29,6 +29,7 @@ const Projects = () => {
       description: "To-do list application built using the MERN stack",
       tags: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com/yadavdeepakk/todo-list-mern",
+      demo: "https://todo-list-mern-demo.vercel.app",
       category: "mern",
       featured: true,
     },
@@ -47,6 +48,7 @@ const Projects = () => {
       description: "Hackathon project using AI-related logic and APIs",
       tags: ["JavaScript", "AI", "API"],
       github: "https://github.com/yadavdeepakk/AI-Hackathon-MS",
+      demo: "https://ai-hackathon-ms.vercel.app",
       category: "web",
       featured: true,
     },
@@ -56,6 +58,7 @@ const Projects = () => {
       description: "Full-stack web app built in JavaScript (medical/health workflow)",
       tags: ["JavaScript", "Full-stack", "Healthcare"],
       github: "https://github.com/yadavdeepakk/Medic-sync-plus",
+      demo: "https://medic-sync-plus.vercel.app",
       category: "mern",
       featured: true,
     },
@@ -65,6 +68,7 @@ const Projects = () => {
       description: "Weather forecast web app consuming weather API",
       tags: ["JavaScript", "API", "React"],
       github: "https://github.com/yadavdeepakk/Weather-Forecast",
+      demo: "https://weather-forecast-demo.vercel.app",
       category: "web",
     },
     {
@@ -73,6 +77,7 @@ const Projects = () => {
       description: "Simple lottery-style game built with JavaScript",
       tags: ["JavaScript", "Game"],
       github: "https://github.com/yadavdeepakk/Lottery-Game",
+      demo: "https://lottery-game-demo.vercel.app",
       category: "games",
     },
     {
@@ -81,6 +86,7 @@ const Projects = () => {
       description: "Random password generator web app",
       tags: ["JavaScript", "Utility"],
       github: "https://github.com/yadavdeepakk/Random-Password-generator",
+      demo: "https://random-password-generator.vercel.app",
       category: "utilities",
     },
     {
@@ -89,6 +95,7 @@ const Projects = () => {
       description: "Basic calculator UI built as a mini-project",
       tags: ["JavaScript", "UI"],
       github: "https://github.com/yadavdeepakk/Calculator",
+      demo: "https://calculator-demo.vercel.app",
       category: "utilities",
     },
     {
