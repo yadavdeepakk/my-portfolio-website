@@ -49,6 +49,15 @@ const Projects = () => {
       demo: "https://medic-sync-plus.vercel.app",
       category: "mern",
     },
+    
+      id: "6",
+      name: "Pest-Control",
+      description: "Pest-control-web",
+      tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/yadavdeepakk/Pest-control-web.git",
+      demo: "https://pest-control-web-kappa.vercel.app/",
+      category: "Web",
+    },
     {
       id: "7",
       name: "Lottery-Game",
