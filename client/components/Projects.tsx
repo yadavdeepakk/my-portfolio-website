@@ -20,6 +20,7 @@ const Projects = () => {
       description: "DSA concepts and practice implementations in Java",
       tags: ["Java", "DSA", "Algorithms"],
       github: "https://github.com/yadavdeepakk/DSA-Java",
+      demo: "https://dsa-java-demo.vercel.app",
       category: "dsa",
       featured: true,
     },
