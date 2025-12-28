@@ -127,8 +127,6 @@ const Projects = () => {
       ? projects
       : projects.filter((p) => p.category === activeFilter);
 
-  const featuredProjects = projects.filter((p) => p.featured);
-
   const categories = [
     { id: "all", label: "All Projects" },
     { id: "web", label: "Web Apps" },
