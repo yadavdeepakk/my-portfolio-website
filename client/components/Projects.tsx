@@ -221,10 +221,7 @@ const Projects = () => {
               </h3>
             )}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {(activeFilter === "all"
-                ? projects.filter((p) => !p.featured)
-                : filteredProjects
-              ).map((project) => (
+              {filteredProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
             </div>
