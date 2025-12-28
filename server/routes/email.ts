@@ -40,7 +40,12 @@ export async function handleEmailSubmission(
   res: Response,
 ) {
   try {
-    const { name, email, message } = req.body;
+    let { name, email, message } = req.body;
+
+    // Trim whitespace
+    name = name?.trim() || "";
+    email = email?.trim() || "";
+    message = message?.trim() || "";
 
     console.log(`Received contact form submission from: ${email}`);
 
@@ -54,8 +59,8 @@ export async function handleEmailSubmission(
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const trimmedEmail = email.trim();
-    if (!emailRegex.test(trimmedEmail)) {
+    if (!emailRegex.test(email)) {
+      console.log(`Email validation failed for: "${email}"`);
       return res.status(400).json({
         success: false,
         error: "Invalid email format",
