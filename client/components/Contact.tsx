@@ -37,14 +37,13 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* Contact Grid */}
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Links */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-foreground mb-8">
-                Get in Touch
-              </h3>
+          {/* Contact Links */}
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
+              Get in Touch
+            </h3>
 
+            <div className="space-y-6">
               {contactLinks.map((link) => {
                 const Icon = link.icon;
                 return (
@@ -73,87 +72,6 @@ const Contact = () => {
                   </a>
                 );
               })}
-            </div>
-
-            {/* Contact Form */}
-            <div>
-              <h3 className="text-2xl font-bold text-foreground mb-8">
-                Send a Message
-              </h3>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-semibold text-foreground mb-2"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-card border border-border text-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-foreground mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-card border border-border text-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-semibold text-foreground mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg bg-card border border-border text-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                    placeholder="Your message..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  {isLoading ? "Sending..." : "Send Message"}
-                </button>
-
-                {submitted && (
-                  <div className="p-4 rounded-lg bg-primary/10 border border-primary/30 text-primary font-semibold text-center animate-fade-in">
-                    Thank you! I'll get back to you soon.
-                  </div>
-                )}
-              </form>
             </div>
           </div>
         </div>
