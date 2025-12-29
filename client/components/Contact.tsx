@@ -1,7 +1,6 @@
 import { Mail, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
-
   const contactLinks = [
     {
       name: "Email",
