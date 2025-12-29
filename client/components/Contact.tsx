@@ -1,65 +1,6 @@
-import { useState } from "react";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [isLoading, setIsLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      let data;
-      const contentType = response.headers.get("content-type");
-
-      if (contentType && contentType.includes("application/json")) {
-        data = await response.json();
-      } else {
-        const text = await response.text();
-        data = text ? JSON.parse(text) : { success: false };
-      }
-
-      if (response.ok && data.success) {
-        setSubmitted(true);
-        setFormData({ name: "", email: "", message: "" });
-        toast.success("Message sent successfully! I'll get back to you soon.");
-        setTimeout(() => setSubmitted(false), 3000);
-      } else {
-        toast.error(data.error || "Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error("Failed to send message. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   const contactLinks = [
     {
