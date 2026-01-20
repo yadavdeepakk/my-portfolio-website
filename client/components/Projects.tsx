@@ -28,7 +28,7 @@ const Projects = () => {
         "Automated attendance tracking system using n8n and Google Sheets",
       tags: ["JavaScript", "n8n", "Google Sheets", "Automation"],
       github: "https://github.com/yadavdeepakk/Attendance-analyzer-n8n",
-      demo: "https://attendance-analyzer-n8n-ehtp-h8fxux0zs.vercel.app/",
+      demo: "https://attendance-analyzer-n8n-ehtp.vercel.app/",
       category: "utilities",
     },
     {
